@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar/SearchBar';
 
 export default class App extends Component {
 
@@ -13,6 +14,7 @@ export default class App extends Component {
     const { initialMessage } = this.state;
     return (
       <div>
+        <SearchBar updateText={(songName) => this.setState({ song: songName }) }/>
         {initialMessage}
       </div>
     );
